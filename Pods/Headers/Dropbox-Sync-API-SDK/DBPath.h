@@ -1,0 +1,1 @@
+../../Dropbox-Sync-API-SDK/dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBPath.h
