@@ -10,171 +10,172 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
-		<key>007C961155204B1385F0A34E</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7635D39C6598453A836E738D</string>
-				<string>5F21B476041B42A6A37BFDBA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Products</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>0201D8DD108742D8B944B9ED</key>
+		<key>027738BDE2774241969A720A</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DBList.h</string>
+			<string>text.xcconfig</string>
 			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBList.h</string>
+			<string>Pods-items-Dropbox-Sync-API-SDK-Private.xcconfig</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>1096E6AFA76C43E2B5E4CCBB</key>
+		<key>084C6057D2F44EFCAA12023C</key>
 		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
 			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>CFNetwork.framework</string>
+			<string>SystemConfiguration.framework</string>
 			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CFNetwork.framework</string>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/SystemConfiguration.framework</string>
 			<key>sourceTree</key>
 			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>125A5F8DA2B94410AD2F134C</key>
+		<key>08A66FB428DD4A6B950FAC3B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>1D83074CDD9F41C19B5516DE</string>
+			<string>D9D282FDE609426F99D8F5D7</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>14E0BFF54E88429092EB6A53</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>D8829D0A864045CC9018A7CA</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Frameworks</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>17D3C812D1A24643B8390FFF</key>
+		<key>10C4BCBA872544999EAF55E7</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DBPath.h</string>
+			<string>text.script.sh</string>
 			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBPath.h</string>
+			<string>Pods-items-resources.sh</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>191053F5D9B745CC878F6905</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>40CE0B726510488597C90AA4</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Resources</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1C6C94F1A39D4DBD8ACD4461</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DBRecord.h</string>
-			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBRecord.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1D83074CDD9F41C19B5516DE</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DBFilesystem.h</string>
-			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBFilesystem.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>1E3E667B74FF4A7F8A2B680D</key>
+		<key>11938AF2D7A14A619C84F68A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>3CB5BD7F993A4566BFAADE38</string>
+			<string>C710EEE1B0E649D7B2A26CF8</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>20D6C6AD0C1B40D4AD9ACC35</key>
+		<key>121BEEA2C26F418DAB63BAB9</key>
 		<dict>
-			<key>buildConfigurations</key>
+			<key>fileRef</key>
+			<string>61143F6ECB364842BA145D23</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>178A9150E9B14F17B8C7BF82</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXTargetDependency</string>
+			<key>target</key>
+			<string>D73993A867B445F583DEF924</string>
+			<key>targetProxy</key>
+			<string>5A6C3477893E4B3D8090AB7A</string>
+		</dict>
+		<key>1A73B5D64E934B4FA4C6C9E7</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>DC0BF9B92FAF463EB6EDC8C0</string>
-				<string>C7DAD8A3D4FB4595A203D4FD</string>
+				<string>FF5718C3564D46C2AF6394FE</string>
+				<string>9483E7A741B54054B08F1D53</string>
+				<string>796C40C6969340708777FE96</string>
+				<string>27694B5C44254D709EC1EA80</string>
+				<string>4B9B9EF4FC714B1596E4D4D9</string>
 			</array>
-			<key>defaultConfigurationIsVisible</key>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-			<key>defaultConfigurationName</key>
-			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
 		</dict>
-		<key>23F6CBFF64E64231BCD6807D</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>5038B4688DC543F786273529</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>2C94B21A5B73484D9BE2FCBB</key>
+		<key>1B35C839372144F69A260C7B</key>
 		<dict>
 			<key>fileRef</key>
-			<string>87FF72F8D71C477583D9185C</string>
+			<string>D58F755547F844109A01817E</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>2E8C9E5DDABC47A694E47456</key>
+		<key>1C7A20CF52DF4FD788988136</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>1B35C839372144F69A260C7B</string>
+				<string>778F68A351DB464DBE78C148</string>
+				<string>5F5D601DC7884380A0315E1C</string>
+				<string>B216DEB7BE9C4957AB417D69</string>
+				<string>605208E9B40740428C97DDD2</string>
+				<string>B2643199D68F4DA3A5790394</string>
+				<string>08A66FB428DD4A6B950FAC3B</string>
+				<string>11938AF2D7A14A619C84F68A</string>
+				<string>683556CFBE7341F9AF123D79</string>
+				<string>F6CEBD1D6FAA45D6BE8995BE</string>
+				<string>38EFBB73548A4DE5A0F1BB65</string>
+				<string>D3760489DC9F4516BE7F24AA</string>
+				<string>4EBF16E665DF4CD8AE49E1FA</string>
+				<string>ECC9E459FEC247068B890A8A</string>
+				<string>9E64ACB2E4C1449A9C50F025</string>
+				<string>DA4EF90584804D8CAFA06248</string>
+				<string>8508679BFC2E41C2B6AE3355</string>
+			</array>
+			<key>isa</key>
+			<string>PBXHeadersBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
+		<key>1EBC9EAE269542C99EB95932</key>
+		<dict>
+			<key>fileRef</key>
+			<string>DC8B97532AAB407C8A4BDB85</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>206201C61BA04E30AAD3B89A</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-items-Dropbox-Sync-API-SDK.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>251ADE09468E400881B1721D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>path</key>
+			<string>Pods-items.xcconfig</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>27694B5C44254D709EC1EA80</key>
+		<dict>
+			<key>fileRef</key>
+			<string>422A4E82D9284E39B45949D7</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>2E34F5F86B554D3485C9A147</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>7F1B27DFE43F4475BD2D70D6</string>
+			<string>251ADE09468E400881B1721D</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -222,263 +223,86 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>315F5A814B084609AAD63916</key>
+		<key>3077AB713FEE40A8B588D317</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>F8F7D6E84497448DABF7F525</string>
-			<key>buildPhases</key>
-			<array>
-				<string>7DF6A99E8BE447D8AE13A907</string>
-				<string>6F5A895D12B14B75A6EEDDA6</string>
-				<string>6C24E41B9A8B4DD7AFD95130</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array/>
+			<key>fileRef</key>
+			<string>B7C6609A21EC492EAFEE1463</string>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>33C842EEBC694B529D185821</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>251ADE09468E400881B1721D</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>YES</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.0</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Pods-items-Dropbox-Sync-API-SDK</string>
-			<key>productName</key>
-			<string>Pods-items-Dropbox-Sync-API-SDK</string>
-			<key>productReference</key>
-			<string>5F21B476041B42A6A37BFDBA</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
-		</dict>
-		<key>325B1BE28641403AB3684FFE</key>
-		<dict>
-			<key>fileRef</key>
-			<string>C1223AED1D964494BF7A43B7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>37B261F8279B43E5820859E3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>949AB0D6E39B41F6B3AD6D17</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3838A44DD75F4F8FADB55E50</key>
-		<dict>
-			<key>fileRef</key>
-			<string>954310AB478745F9BAF2D3DD</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3A710B0022CE4BB69A3DF792</key>
-		<dict>
-			<key>fileRef</key>
-			<string>CEB01DCF9D0C4730B1BCA8A6</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>3BFECCA0F75441D8B53AA1F4</key>
-		<dict>
-			<key>buildConfigurations</key>
-			<array>
-				<string>2E8C9E5DDABC47A694E47456</string>
-				<string>7E987DE640F64B5F99C561FC</string>
-			</array>
-			<key>defaultConfigurationIsVisible</key>
-			<string>0</string>
-			<key>defaultConfigurationName</key>
 			<string>Release</string>
-			<key>isa</key>
-			<string>XCConfigurationList</string>
 		</dict>
-		<key>3CB5BD7F993A4566BFAADE38</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>SystemConfiguration.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/SystemConfiguration.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>3EBD43C06CF741B68EC8D4F7</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DBAccount.h</string>
-			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBAccount.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>40CE0B726510488597C90AA4</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Dropbox.framework</string>
-			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>44BF716779EB40CABCCB3F9A</key>
+		<key>38EFBB73548A4DE5A0F1BB65</key>
 		<dict>
 			<key>fileRef</key>
-			<string>0201D8DD108742D8B944B9ED</string>
+			<string>76CC0C2B05404BF4A8814016</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>4A0C4F9136724777B3EBC52A</key>
+		<key>3E5CB64E5F2A4D159F4BE233</key>
 		<dict>
-			<key>fileRef</key>
-			<string>4BDB29FC68844D9DA8DD687D</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>4BDB29FC68844D9DA8DD687D</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DBDatastoreInfo.h</string>
-			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBDatastoreInfo.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>4CD89756EBAB4A8EA414C292</key>
-		<dict>
-			<key>children</key>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
 			<array>
-				<string>97A0E2C6E89C4B249627B879</string>
-				<string>EE94DB42EE9C498AA3F23D38</string>
-				<string>68BE5627DE7E4915AA0291B3</string>
-				<string>9CE2D01A978D4D74B5120A46</string>
+				<string>9399F6E665AD407A81C71495</string>
 			</array>
 			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Support Files</string>
-			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-		</dict>
-		<key>4F1E7278BC28476A8C62BFA2</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DBFile.h</string>
-			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBFile.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5038B4688DC543F786273529</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>3EBD43C06CF741B68EC8D4F7</string>
-				<string>C1223AED1D964494BF7A43B7</string>
-				<string>DF255328E45A4074A35599C1</string>
-				<string>87FF72F8D71C477583D9185C</string>
-				<string>4BDB29FC68844D9DA8DD687D</string>
-				<string>AB981CFFEDB042FB88F827A4</string>
-				<string>5116E114EE5C40C5AB8DD4CD</string>
-				<string>4F1E7278BC28476A8C62BFA2</string>
-				<string>949AB0D6E39B41F6B3AD6D17</string>
-				<string>954310AB478745F9BAF2D3DD</string>
-				<string>1D83074CDD9F41C19B5516DE</string>
-				<string>0201D8DD108742D8B944B9ED</string>
-				<string>17D3C812D1A24643B8390FFF</string>
-				<string>1C6C94F1A39D4DBD8ACD4461</string>
-				<string>EE29E0868D8D4A7E97356103</string>
-				<string>CEB01DCF9D0C4730B1BCA8A6</string>
-				<string>6916E29F63AF4EC6B7951113</string>
-				<string>191053F5D9B745CC878F6905</string>
-				<string>4CD89756EBAB4A8EA414C292</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Dropbox-Sync-API-SDK</string>
-			<key>path</key>
-			<string>Dropbox-Sync-API-SDK</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>5116E114EE5C40C5AB8DD4CD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DBError.h</string>
-			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBError.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>51F665F0EBB04E24A3FD1C14</key>
-		<dict>
-			<key>fileRef</key>
-			<string>A24940417BBC479B9C200B4A</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>53B57482456A4404A3B9A494</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1096E6AFA76C43E2B5E4CCBB</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>5F21B476041B42A6A37BFDBA</key>
-		<dict>
-			<key>explicitFileType</key>
-			<string>archive.ar</string>
-			<key>includeInIndex</key>
+			<string>PBXSourcesBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>path</key>
-			<string>libPods-items-Dropbox-Sync-API-SDK.a</string>
-			<key>sourceTree</key>
-			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>68BE5627DE7E4915AA0291B3</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-items-Dropbox-Sync-API-SDK-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>6916E29F63AF4EC6B7951113</key>
+		<key>40B221B092C74D80AA140A32</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -493,107 +317,41 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>6C24E41B9A8B4DD7AFD95130</key>
+		<key>422A4E82D9284E39B45949D7</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BFFC90FA04B744618504FB75</string>
-				<string>325B1BE28641403AB3684FFE</string>
-				<string>F4467A3C406B435E836B7B38</string>
-				<string>2C94B21A5B73484D9BE2FCBB</string>
-				<string>4A0C4F9136724777B3EBC52A</string>
-				<string>F9444723318A400C9264A008</string>
-				<string>F414823EC39B4B2D902C0251</string>
-				<string>BF526E99ECD64EEC8384DF15</string>
-				<string>37B261F8279B43E5820859E3</string>
-				<string>3838A44DD75F4F8FADB55E50</string>
-				<string>125A5F8DA2B94410AD2F134C</string>
-				<string>44BF716779EB40CABCCB3F9A</string>
-				<string>DB07B82BDE7B43F188D76374</string>
-				<string>903A7451C64142C1852EB149</string>
-				<string>7686F063F342463AB00429A5</string>
-				<string>3A710B0022CE4BB69A3DF792</string>
-				<string>8B3B0F6B4FBA4E769786CFE1</string>
-			</array>
 			<key>isa</key>
-			<string>PBXHeadersBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>6C4DAFD59DE148ABB22049F7</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>EE94DB42EE9C498AA3F23D38</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_PREFIX_HEADER</key>
-				<string>Pods-items-Dropbox-Sync-API-SDK-prefix.pch</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>Release</string>
+			<string>Security.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Security.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>6F5A895D12B14B75A6EEDDA6</key>
+		<key>4296DBEB9F08463AA105877C</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
+			<key>buildConfigurations</key>
 			<array>
-				<string>53B57482456A4404A3B9A494</string>
-				<string>A8B8E2D9A43A4779AB01F5F3</string>
-				<string>E622121F26C542088C7F4413</string>
-				<string>AB755243D5F949AA90503567</string>
-				<string>1E3E667B74FF4A7F8A2B680D</string>
+				<string>A77B1B5F3CB94FF4861B67B3</string>
+				<string>82720E5374D242D889FFD834</string>
 			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
+			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
+			<key>isa</key>
+			<string>XCConfigurationList</string>
 		</dict>
-		<key>7635D39C6598453A836E738D</key>
+		<key>4B9B9EF4FC714B1596E4D4D9</key>
+		<dict>
+			<key>fileRef</key>
+			<string>084C6057D2F44EFCAA12023C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>4E242062633142AEAFFAADF7</key>
 		<dict>
 			<key>explicitFileType</key>
 			<string>archive.ar</string>
@@ -606,105 +364,28 @@
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
-		<key>7686F063F342463AB00429A5</key>
+		<key>4EBF16E665DF4CD8AE49E1FA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>EE29E0868D8D4A7E97356103</string>
+			<string>C351E6E0230043ABA0D9392D</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>7DF6A99E8BE447D8AE13A907</key>
+		<key>534028D6599045C09FEDEF84</key>
 		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
+			<key>buildConfigurations</key>
 			<array>
-				<string>AD9D7D50B91F4EF0BB4BB292</string>
+				<string>2E34F5F86B554D3485C9A147</string>
+				<string>33C842EEBC694B529D185821</string>
 			</array>
-			<key>isa</key>
-			<string>PBXSourcesBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
+			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
-		</dict>
-		<key>7E987DE640F64B5F99C561FC</key>
-		<dict>
-			<key>baseConfigurationReference</key>
-			<string>7F1B27DFE43F4475BD2D70D6</string>
-			<key>buildSettings</key>
-			<dict>
-				<key>ALWAYS_SEARCH_USER_PATHS</key>
-				<string>NO</string>
-				<key>ARCHS</key>
-				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
-				<key>COPY_PHASE_STRIP</key>
-				<string>YES</string>
-				<key>DSTROOT</key>
-				<string>/tmp/xcodeproj.dst</string>
-				<key>GCC_C_LANGUAGE_STANDARD</key>
-				<string>gnu99</string>
-				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
-				<string>YES</string>
-				<key>GCC_VERSION</key>
-				<string>com.apple.compilers.llvm.clang.1_0</string>
-				<key>INSTALL_PATH</key>
-				<string>$(BUILT_PRODUCTS_DIR)</string>
-				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.0</string>
-				<key>OTHER_CFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_CPLUSPLUSFLAGS</key>
-				<array>
-					<string>-DNS_BLOCK_ASSERTIONS=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>OTHER_LDFLAGS</key>
-				<string></string>
-				<key>PRODUCT_NAME</key>
-				<string>$(TARGET_NAME)</string>
-				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
-				<string>$(TARGET_NAME)</string>
-				<key>SDKROOT</key>
-				<string>iphoneos</string>
-				<key>SKIP_INSTALL</key>
-				<string>YES</string>
-				<key>VALIDATE_PRODUCT</key>
-				<string>YES</string>
-			</dict>
-			<key>isa</key>
-			<string>XCBuildConfiguration</string>
-			<key>name</key>
+			<key>defaultConfigurationName</key>
 			<string>Release</string>
-		</dict>
-		<key>7F1B27DFE43F4475BD2D70D6</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-items.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>XCConfigurationList</string>
 		</dict>
-		<key>863C5A97F83443E994D616DB</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>path</key>
-			<string>Pods-items-acknowledgements.markdown</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>87FF72F8D71C477583D9185C</key>
+		<key>56820969EA284C8A8A02E832</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -713,42 +394,26 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DBDatastore.h</string>
+			<string>DBUtil.h</string>
 			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBDatastore.h</string>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBUtil.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8ABF082B6AAC4D9ABE1CF559</key>
+		<key>586605D93B9E4B719A5ED3C9</key>
 		<dict>
-			<key>children</key>
-			<array>
-				<string>B4D96144F5AC477BBDB42C98</string>
-				<string>14E0BFF54E88429092EB6A53</string>
-				<string>23F6CBFF64E64231BCD6807D</string>
-				<string>007C961155204B1385F0A34E</string>
-				<string>F24D3449D56B47EF936080E4</string>
-			</array>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXGroup</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.objc</string>
+			<key>path</key>
+			<string>Pods-items-dummy.m</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>8B3B0F6B4FBA4E769786CFE1</key>
-		<dict>
-			<key>fileRef</key>
-			<string>6916E29F63AF4EC6B7951113</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>903A7451C64142C1852EB149</key>
-		<dict>
-			<key>fileRef</key>
-			<string>1C6C94F1A39D4DBD8ACD4461</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>949AB0D6E39B41F6B3AD6D17</key>
+		<key>5897686FAB5B41E5A72ACA69</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -763,131 +428,36 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>954310AB478745F9BAF2D3DD</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DBFileStatus.h</string>
-			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBFileStatus.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>97A0E2C6E89C4B249627B879</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-items-Dropbox-Sync-API-SDK.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>9CE2D01A978D4D74B5120A46</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-items-Dropbox-Sync-API-SDK-prefix.pch</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A12D1932458F4E7E90835142</key>
+		<key>5A6C3477893E4B3D8090AB7A</key>
 		<dict>
 			<key>containerPortal</key>
-			<string>F184087BA28A4F1CBDD82E33</string>
+			<string>64B6CACB39C7401AAA68DA3C</string>
 			<key>isa</key>
 			<string>PBXContainerItemProxy</string>
 			<key>proxyType</key>
 			<string>1</string>
 			<key>remoteGlobalIDString</key>
-			<string>315F5A814B084609AAD63916</string>
+			<string>D73993A867B445F583DEF924</string>
 			<key>remoteInfo</key>
 			<string>Pods-items-Dropbox-Sync-API-SDK</string>
 		</dict>
-		<key>A24940417BBC479B9C200B4A</key>
+		<key>5CAB8276876E4F29B614579E</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>sourcecode.c.objc</string>
-			<key>path</key>
-			<string>Pods-items-dummy.m</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>A8B8E2D9A43A4779AB01F5F3</key>
-		<dict>
-			<key>fileRef</key>
-			<string>B4B44A58F5B248A8A956B7BE</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AB755243D5F949AA90503567</key>
-		<dict>
-			<key>fileRef</key>
-			<string>EF75123E418A45BD813E0109</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AB981CFFEDB042FB88F827A4</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
+			<string>wrapper.framework</string>
 			<key>name</key>
-			<string>DBDatastoreManager.h</string>
+			<string>QuartzCore.framework</string>
 			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBDatastoreManager.h</string>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
 			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
+			<string>DEVELOPER_DIR</string>
 		</dict>
-		<key>ABAFAF0EFCF4429FAD6BACA0</key>
-		<dict>
-			<key>children</key>
-			<array>
-				<string>7F1B27DFE43F4475BD2D70D6</string>
-				<string>863C5A97F83443E994D616DB</string>
-				<string>D18655649FC043019D5FC54C</string>
-				<string>A24940417BBC479B9C200B4A</string>
-				<string>F08DC0308B09442F9884EE16</string>
-				<string>CA247B91CAFD44C69653A576</string>
-			</array>
-			<key>isa</key>
-			<string>PBXGroup</string>
-			<key>name</key>
-			<string>Pods-items</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>AD9D7D50B91F4EF0BB4BB292</key>
-		<dict>
-			<key>fileRef</key>
-			<string>68BE5627DE7E4915AA0291B3</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>AFCC2964AE444FCF89802657</key>
+		<key>5EF884CDDD954D6AAD3D407F</key>
 		<dict>
 			<key>baseConfigurationReference</key>
-			<string>EE94DB42EE9C498AA3F23D38</string>
+			<string>027738BDE2774241969A720A</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>ALWAYS_SEARCH_USER_PATHS</key>
@@ -895,32 +465,31 @@
 				<key>ARCHS</key>
 				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
 				<key>COPY_PHASE_STRIP</key>
-				<string>NO</string>
+				<string>YES</string>
 				<key>DSTROOT</key>
 				<string>/tmp/xcodeproj.dst</string>
 				<key>GCC_C_LANGUAGE_STANDARD</key>
 				<string>gnu99</string>
-				<key>GCC_DYNAMIC_NO_PIC</key>
-				<string>NO</string>
-				<key>GCC_OPTIMIZATION_LEVEL</key>
-				<string>0</string>
 				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
 				<string>YES</string>
 				<key>GCC_PREFIX_HEADER</key>
 				<string>Pods-items-Dropbox-Sync-API-SDK-prefix.pch</string>
-				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
-				<array>
-					<string>DEBUG=1</string>
-					<string>$(inherited)</string>
-				</array>
-				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
-				<string>NO</string>
 				<key>GCC_VERSION</key>
 				<string>com.apple.compilers.llvm.clang.1_0</string>
 				<key>INSTALL_PATH</key>
 				<string>$(BUILT_PRODUCTS_DIR)</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
 				<string>6.0</string>
+				<key>OTHER_CFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>OTHER_CPLUSPLUSFLAGS</key>
+				<array>
+					<string>-DNS_BLOCK_ASSERTIONS=1</string>
+					<string>$(inherited)</string>
+				</array>
 				<key>OTHER_LDFLAGS</key>
 				<string></string>
 				<key>PRODUCT_NAME</key>
@@ -931,90 +500,92 @@
 				<string>iphoneos</string>
 				<key>SKIP_INSTALL</key>
 				<string>YES</string>
+				<key>VALIDATE_PRODUCT</key>
+				<string>YES</string>
 			</dict>
 			<key>isa</key>
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
-			<string>Debug</string>
+			<string>Release</string>
 		</dict>
-		<key>B3EBD20D16AF4FACA18B9F4F</key>
+		<key>5F5D601DC7884380A0315E1C</key>
 		<dict>
-			<key>buildConfigurationList</key>
-			<string>3BFECCA0F75441D8B53AA1F4</string>
-			<key>buildPhases</key>
-			<array>
-				<string>E747BC6772CC4C19A6541108</string>
-				<string>EA0C4BF3B21A40DA90543A2C</string>
-			</array>
-			<key>buildRules</key>
-			<array/>
-			<key>dependencies</key>
-			<array>
-				<string>E87D29D474144DC8A086BCBA</string>
-			</array>
+			<key>fileRef</key>
+			<string>740570BC644B4562ADFF1B77</string>
 			<key>isa</key>
-			<string>PBXNativeTarget</string>
-			<key>name</key>
-			<string>Pods-items</string>
-			<key>productName</key>
-			<string>Pods-items</string>
-			<key>productReference</key>
-			<string>7635D39C6598453A836E738D</string>
-			<key>productType</key>
-			<string>com.apple.product-type.library.static</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>B4B44A58F5B248A8A956B7BE</key>
+		<key>605208E9B40740428C97DDD2</key>
 		<dict>
+			<key>fileRef</key>
+			<string>8A9C39957A9D4668BE6D534D</string>
 			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Foundation.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
+			<string>PBXBuildFile</string>
 		</dict>
-		<key>B4D96144F5AC477BBDB42C98</key>
+		<key>61143F6ECB364842BA145D23</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text</string>
-			<key>name</key>
-			<string>Podfile</string>
+			<string>sourcecode.c.objc</string>
 			<key>path</key>
-			<string>../Podfile</string>
+			<string>Pods-items-Dropbox-Sync-API-SDK-dummy.m</string>
 			<key>sourceTree</key>
-			<string>SOURCE_ROOT</string>
-			<key>xcLanguageSpecificationIdentifier</key>
-			<string>xcode.lang.ruby</string>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BDEF10316AE64AB3BFA1B597</key>
+		<key>64B6CACB39C7401AAA68DA3C</key>
 		<dict>
-			<key>fileRef</key>
-			<string>B4B44A58F5B248A8A956B7BE</string>
+			<key>attributes</key>
+			<dict>
+				<key>LastUpgradeCheck</key>
+				<string>0500</string>
+			</dict>
+			<key>buildConfigurationList</key>
+			<string>4296DBEB9F08463AA105877C</string>
+			<key>compatibilityVersion</key>
+			<string>Xcode 3.2</string>
+			<key>developmentRegion</key>
+			<string>English</string>
+			<key>hasScannedForEncodings</key>
+			<string>0</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXProject</string>
+			<key>knownRegions</key>
+			<array>
+				<string>en</string>
+			</array>
+			<key>mainGroup</key>
+			<string>731DA8693D5D453EBCC00ADC</string>
+			<key>productRefGroup</key>
+			<string>8AB76982C69B4C089DD3F3C4</string>
+			<key>projectDirPath</key>
+			<string></string>
+			<key>projectReferences</key>
+			<array/>
+			<key>projectRoot</key>
+			<string></string>
+			<key>targets</key>
+			<array>
+				<string>694A9534DB724C66B1BDB9AF</string>
+				<string>D73993A867B445F583DEF924</string>
+			</array>
 		</dict>
-		<key>BF526E99ECD64EEC8384DF15</key>
+		<key>650856789574472AA14CAF67</key>
 		<dict>
-			<key>fileRef</key>
-			<string>4F1E7278BC28476A8C62BFA2</string>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
-			<string>PBXBuildFile</string>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-items-environment.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>BFFC90FA04B744618504FB75</key>
-		<dict>
-			<key>fileRef</key>
-			<string>3EBD43C06CF741B68EC8D4F7</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>C1223AED1D964494BF7A43B7</key>
+		<key>65D09A45D5CF4B22B7FBDD9F</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1023,13 +594,175 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DBAccountInfo.h</string>
+			<string>DBTable.h</string>
 			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBAccountInfo.h</string>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBTable.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>C7DAD8A3D4FB4595A203D4FD</key>
+		<key>683556CFBE7341F9AF123D79</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5897686FAB5B41E5A72ACA69</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>683A00086E95456FA4921FD5</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A5B91C5250B848C0B51ADE4F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>694A9534DB724C66B1BDB9AF</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>534028D6599045C09FEDEF84</string>
+			<key>buildPhases</key>
+			<array>
+				<string>3E5CB64E5F2A4D159F4BE233</string>
+				<string>FFFA55BCDC4546F9AB296403</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array>
+				<string>178A9150E9B14F17B8C7BF82</string>
+			</array>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-items</string>
+			<key>productName</key>
+			<string>Pods-items</string>
+			<key>productReference</key>
+			<string>4E242062633142AEAFFAADF7</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>6FA5D13EF0074C4A859D2CA2</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>87431A9A663144BBBA2D6979</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Frameworks</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>731DA8693D5D453EBCC00ADC</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>D75D36A6B8E149EFB804243E</string>
+				<string>683A00086E95456FA4921FD5</string>
+				<string>73CCFB0427E6442AB007DB7F</string>
+				<string>8AB76982C69B4C089DD3F3C4</string>
+				<string>EC6CCACA83FA4042B99AC87F</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>732458E6E2004EB28E1BFA8F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DBRecord.h</string>
+			<key>path</key>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBRecord.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>73CCFB0427E6442AB007DB7F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>A0B803F842C84301B08C91BA</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>740570BC644B4562ADFF1B77</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DBAccountManager.h</string>
+			<key>path</key>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBAccountManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>76CC0C2B05404BF4A8814016</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DBFilesystem.h</string>
+			<key>path</key>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBFilesystem.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>778F68A351DB464DBE78C148</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F2F7F9C13B4C4F8BA9DB3B7C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>796B965D18FA4C8F9F044094</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>206201C61BA04E30AAD3B89A</string>
+				<string>027738BDE2774241969A720A</string>
+				<string>61143F6ECB364842BA145D23</string>
+				<string>8C07D69E34484875BFD93EEF</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Support Files</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+		</dict>
+		<key>796C40C6969340708777FE96</key>
+		<dict>
+			<key>fileRef</key>
+			<string>5CAB8276876E4F29B614579E</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>82720E5374D242D889FFD834</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -1087,20 +820,27 @@
 			<key>name</key>
 			<string>Release</string>
 		</dict>
-		<key>CA247B91CAFD44C69653A576</key>
+		<key>8508679BFC2E41C2B6AE3355</key>
 		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
+			<key>fileRef</key>
+			<string>40B221B092C74D80AA140A32</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>87431A9A663144BBBA2D6979</key>
+		<dict>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.script.sh</string>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Dropbox.framework</string>
 			<key>path</key>
-			<string>Pods-items-resources.sh</string>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>CEB01DCF9D0C4730B1BCA8A6</key>
+		<key>8A9C39957A9D4668BE6D534D</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1109,34 +849,188 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DBUtil.h</string>
+			<string>DBDatastoreInfo.h</string>
 			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBUtil.h</string>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBDatastoreInfo.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D18655649FC043019D5FC54C</key>
+		<key>8AB76982C69B4C089DD3F3C4</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>4E242062633142AEAFFAADF7</string>
+				<string>DC8B97532AAB407C8A4BDB85</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Products</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>8B7B613D240541028F615386</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>text.plist.xml</string>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DBFileStatus.h</string>
 			<key>path</key>
-			<string>Pods-items-acknowledgements.plist</string>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBFileStatus.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>D8829D0A864045CC9018A7CA</key>
+		<key>8C07D69E34484875BFD93EEF</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>path</key>
+			<string>Pods-items-Dropbox-Sync-API-SDK-prefix.pch</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>9399F6E665AD407A81C71495</key>
+		<dict>
+			<key>fileRef</key>
+			<string>586605D93B9E4B719A5ED3C9</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9483E7A741B54054B08F1D53</key>
+		<dict>
+			<key>fileRef</key>
+			<string>B7C6609A21EC492EAFEE1463</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>9D9218A6EEDD4A2AA67E7841</key>
+		<dict>
+			<key>baseConfigurationReference</key>
+			<string>027738BDE2774241969A720A</string>
+			<key>buildSettings</key>
+			<dict>
+				<key>ALWAYS_SEARCH_USER_PATHS</key>
+				<string>NO</string>
+				<key>ARCHS</key>
+				<string>$(ARCHS_STANDARD_INCLUDING_64_BIT)</string>
+				<key>COPY_PHASE_STRIP</key>
+				<string>NO</string>
+				<key>DSTROOT</key>
+				<string>/tmp/xcodeproj.dst</string>
+				<key>GCC_C_LANGUAGE_STANDARD</key>
+				<string>gnu99</string>
+				<key>GCC_DYNAMIC_NO_PIC</key>
+				<string>NO</string>
+				<key>GCC_OPTIMIZATION_LEVEL</key>
+				<string>0</string>
+				<key>GCC_PRECOMPILE_PREFIX_HEADER</key>
+				<string>YES</string>
+				<key>GCC_PREFIX_HEADER</key>
+				<string>Pods-items-Dropbox-Sync-API-SDK-prefix.pch</string>
+				<key>GCC_PREPROCESSOR_DEFINITIONS</key>
+				<array>
+					<string>DEBUG=1</string>
+					<string>$(inherited)</string>
+				</array>
+				<key>GCC_SYMBOLS_PRIVATE_EXTERN</key>
+				<string>NO</string>
+				<key>GCC_VERSION</key>
+				<string>com.apple.compilers.llvm.clang.1_0</string>
+				<key>INSTALL_PATH</key>
+				<string>$(BUILT_PRODUCTS_DIR)</string>
+				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
+				<string>6.0</string>
+				<key>OTHER_LDFLAGS</key>
+				<string></string>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+				<key>PUBLIC_HEADERS_FOLDER_PATH</key>
+				<string>$(TARGET_NAME)</string>
+				<key>SDKROOT</key>
+				<string>iphoneos</string>
+				<key>SKIP_INSTALL</key>
+				<string>YES</string>
+			</dict>
+			<key>isa</key>
+			<string>XCBuildConfiguration</string>
+			<key>name</key>
+			<string>Debug</string>
+		</dict>
+		<key>9E64ACB2E4C1449A9C50F025</key>
+		<dict>
+			<key>fileRef</key>
+			<string>65D09A45D5CF4B22B7FBDD9F</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>A0B803F842C84301B08C91BA</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>1096E6AFA76C43E2B5E4CCBB</string>
-				<string>B4B44A58F5B248A8A956B7BE</string>
-				<string>E0E0A1B663F54FECA0DCE6B3</string>
-				<string>EF75123E418A45BD813E0109</string>
-				<string>3CB5BD7F993A4566BFAADE38</string>
+				<string>D58F755547F844109A01817E</string>
+				<string>F2F7F9C13B4C4F8BA9DB3B7C</string>
+				<string>740570BC644B4562ADFF1B77</string>
+				<string>C2FC34231600440DB8D276BD</string>
+				<string>8A9C39957A9D4668BE6D534D</string>
+				<string>EDD8F3FCD0564403B34AAE4D</string>
+				<string>D9D282FDE609426F99D8F5D7</string>
+				<string>C710EEE1B0E649D7B2A26CF8</string>
+				<string>5897686FAB5B41E5A72ACA69</string>
+				<string>8B7B613D240541028F615386</string>
+				<string>76CC0C2B05404BF4A8814016</string>
+				<string>F767792A317E414683E3494F</string>
+				<string>C351E6E0230043ABA0D9392D</string>
+				<string>732458E6E2004EB28E1BFA8F</string>
+				<string>65D09A45D5CF4B22B7FBDD9F</string>
+				<string>56820969EA284C8A8A02E832</string>
+				<string>40B221B092C74D80AA140A32</string>
+				<string>6FA5D13EF0074C4A859D2CA2</string>
+				<string>796B965D18FA4C8F9F044094</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Dropbox-Sync-API-SDK</string>
+			<key>path</key>
+			<string>Dropbox-Sync-API-SDK</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A17D8DE2E0CE496CBC16EF6C</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>251ADE09468E400881B1721D</string>
+				<string>F3D2F320FE4444A0909B02A6</string>
+				<string>FB27037F70A6405CBCB2A2BB</string>
+				<string>586605D93B9E4B719A5ED3C9</string>
+				<string>650856789574472AA14CAF67</string>
+				<string>10C4BCBA872544999EAF55E7</string>
+			</array>
+			<key>isa</key>
+			<string>PBXGroup</string>
+			<key>name</key>
+			<string>Pods-items</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>A5B91C5250B848C0B51ADE4F</key>
+		<dict>
+			<key>children</key>
+			<array>
+				<string>F5AEE4660BEE4570A7E2515C</string>
+				<string>B7C6609A21EC492EAFEE1463</string>
+				<string>5CAB8276876E4F29B614579E</string>
+				<string>422A4E82D9284E39B45949D7</string>
+				<string>084C6057D2F44EFCAA12023C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1145,14 +1039,7 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>DB07B82BDE7B43F188D76374</key>
-		<dict>
-			<key>fileRef</key>
-			<string>17D3C812D1A24643B8390FFF</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>DC0BF9B92FAF463EB6EDC8C0</key>
+		<key>A77B1B5F3CB94FF4861B67B3</key>
 		<dict>
 			<key>buildSettings</key>
 			<dict>
@@ -1219,7 +1106,34 @@
 			<key>name</key>
 			<string>Debug</string>
 		</dict>
-		<key>DF255328E45A4074A35599C1</key>
+		<key>B216DEB7BE9C4957AB417D69</key>
+		<dict>
+			<key>fileRef</key>
+			<string>C2FC34231600440DB8D276BD</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B2643199D68F4DA3A5790394</key>
+		<dict>
+			<key>fileRef</key>
+			<string>EDD8F3FCD0564403B34AAE4D</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>B7C6609A21EC492EAFEE1463</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>Foundation.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Foundation.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>C2FC34231600440DB8D276BD</key>
 		<dict>
 			<key>includeInIndex</key>
 			<string>1</string>
@@ -1228,171 +1142,159 @@
 			<key>lastKnownFileType</key>
 			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>DBAccountManager.h</string>
+			<string>DBDatastore.h</string>
 			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBAccountManager.h</string>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBDatastore.h</string>
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E0E0A1B663F54FECA0DCE6B3</key>
+		<key>C351E6E0230043ABA0D9392D</key>
 		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
 			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
+			<string>sourcecode.c.h</string>
 			<key>name</key>
-			<string>QuartzCore.framework</string>
+			<string>DBPath.h</string>
 			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/QuartzCore.framework</string>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBPath.h</string>
 			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
+			<string>&lt;group&gt;</string>
 		</dict>
-		<key>E622121F26C542088C7F4413</key>
+		<key>C710EEE1B0E649D7B2A26CF8</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DBFile.h</string>
+			<key>path</key>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBFile.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D3760489DC9F4516BE7F24AA</key>
 		<dict>
 			<key>fileRef</key>
-			<string>E0E0A1B663F54FECA0DCE6B3</string>
+			<string>F767792A317E414683E3494F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>E747BC6772CC4C19A6541108</key>
+		<key>D58F755547F844109A01817E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DBAccount.h</string>
+			<key>path</key>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBAccount.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>D73993A867B445F583DEF924</key>
+		<dict>
+			<key>buildConfigurationList</key>
+			<string>ED80B839733649388F8ABCFC</string>
+			<key>buildPhases</key>
+			<array>
+				<string>EC627BF2005942A48060BCE4</string>
+				<string>1A73B5D64E934B4FA4C6C9E7</string>
+				<string>1C7A20CF52DF4FD788988136</string>
+			</array>
+			<key>buildRules</key>
+			<array/>
+			<key>dependencies</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXNativeTarget</string>
+			<key>name</key>
+			<string>Pods-items-Dropbox-Sync-API-SDK</string>
+			<key>productName</key>
+			<string>Pods-items-Dropbox-Sync-API-SDK</string>
+			<key>productReference</key>
+			<string>DC8B97532AAB407C8A4BDB85</string>
+			<key>productType</key>
+			<string>com.apple.product-type.library.static</string>
+		</dict>
+		<key>D75D36A6B8E149EFB804243E</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>name</key>
+			<string>Podfile</string>
+			<key>path</key>
+			<string>../Podfile</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
+			<key>xcLanguageSpecificationIdentifier</key>
+			<string>xcode.lang.ruby</string>
+		</dict>
+		<key>D9D282FDE609426F99D8F5D7</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DBError.h</string>
+			<key>path</key>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBError.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>DA4EF90584804D8CAFA06248</key>
+		<dict>
+			<key>fileRef</key>
+			<string>56820969EA284C8A8A02E832</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>DC8B97532AAB407C8A4BDB85</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>path</key>
+			<string>libPods-items-Dropbox-Sync-API-SDK.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>EC627BF2005942A48060BCE4</key>
 		<dict>
 			<key>buildActionMask</key>
 			<string>2147483647</string>
 			<key>files</key>
 			<array>
-				<string>51F665F0EBB04E24A3FD1C14</string>
+				<string>121BEEA2C26F418DAB63BAB9</string>
 			</array>
 			<key>isa</key>
 			<string>PBXSourcesBuildPhase</string>
 			<key>runOnlyForDeploymentPostprocessing</key>
 			<string>0</string>
 		</dict>
-		<key>E87D29D474144DC8A086BCBA</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXTargetDependency</string>
-			<key>target</key>
-			<string>315F5A814B084609AAD63916</string>
-			<key>targetProxy</key>
-			<string>A12D1932458F4E7E90835142</string>
-		</dict>
-		<key>EA0C4BF3B21A40DA90543A2C</key>
-		<dict>
-			<key>buildActionMask</key>
-			<string>2147483647</string>
-			<key>files</key>
-			<array>
-				<string>BDEF10316AE64AB3BFA1B597</string>
-				<string>F0E834A79FD44F82B07C9F41</string>
-			</array>
-			<key>isa</key>
-			<string>PBXFrameworksBuildPhase</string>
-			<key>runOnlyForDeploymentPostprocessing</key>
-			<string>0</string>
-		</dict>
-		<key>EE29E0868D8D4A7E97356103</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>name</key>
-			<string>DBTable.h</string>
-			<key>path</key>
-			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBTable.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EE94DB42EE9C498AA3F23D38</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>text.xcconfig</string>
-			<key>path</key>
-			<string>Pods-items-Dropbox-Sync-API-SDK-Private.xcconfig</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>EF75123E418A45BD813E0109</key>
-		<dict>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>wrapper.framework</string>
-			<key>name</key>
-			<string>Security.framework</string>
-			<key>path</key>
-			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/Security.framework</string>
-			<key>sourceTree</key>
-			<string>DEVELOPER_DIR</string>
-		</dict>
-		<key>F08DC0308B09442F9884EE16</key>
-		<dict>
-			<key>includeInIndex</key>
-			<string>1</string>
-			<key>isa</key>
-			<string>PBXFileReference</string>
-			<key>lastKnownFileType</key>
-			<string>sourcecode.c.h</string>
-			<key>path</key>
-			<string>Pods-items-environment.h</string>
-			<key>sourceTree</key>
-			<string>&lt;group&gt;</string>
-		</dict>
-		<key>F0E834A79FD44F82B07C9F41</key>
-		<dict>
-			<key>fileRef</key>
-			<string>5F21B476041B42A6A37BFDBA</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F184087BA28A4F1CBDD82E33</key>
-		<dict>
-			<key>attributes</key>
-			<dict>
-				<key>LastUpgradeCheck</key>
-				<string>0500</string>
-			</dict>
-			<key>buildConfigurationList</key>
-			<string>20D6C6AD0C1B40D4AD9ACC35</string>
-			<key>compatibilityVersion</key>
-			<string>Xcode 3.2</string>
-			<key>developmentRegion</key>
-			<string>English</string>
-			<key>hasScannedForEncodings</key>
-			<string>0</string>
-			<key>isa</key>
-			<string>PBXProject</string>
-			<key>knownRegions</key>
-			<array>
-				<string>en</string>
-			</array>
-			<key>mainGroup</key>
-			<string>8ABF082B6AAC4D9ABE1CF559</string>
-			<key>productRefGroup</key>
-			<string>007C961155204B1385F0A34E</string>
-			<key>projectDirPath</key>
-			<string></string>
-			<key>projectReferences</key>
-			<array/>
-			<key>projectRoot</key>
-			<string></string>
-			<key>targets</key>
-			<array>
-				<string>B3EBD20D16AF4FACA18B9F4F</string>
-				<string>315F5A814B084609AAD63916</string>
-			</array>
-		</dict>
-		<key>F24D3449D56B47EF936080E4</key>
+		<key>EC6CCACA83FA4042B99AC87F</key>
 		<dict>
 			<key>children</key>
 			<array>
-				<string>ABAFAF0EFCF4429FAD6BACA0</string>
+				<string>A17D8DE2E0CE496CBC16EF6C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -1401,26 +1303,19 @@
 			<key>sourceTree</key>
 			<string>&lt;group&gt;</string>
 		</dict>
-		<key>F414823EC39B4B2D902C0251</key>
+		<key>ECC9E459FEC247068B890A8A</key>
 		<dict>
 			<key>fileRef</key>
-			<string>5116E114EE5C40C5AB8DD4CD</string>
+			<string>732458E6E2004EB28E1BFA8F</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
-		<key>F4467A3C406B435E836B7B38</key>
-		<dict>
-			<key>fileRef</key>
-			<string>DF255328E45A4074A35599C1</string>
-			<key>isa</key>
-			<string>PBXBuildFile</string>
-		</dict>
-		<key>F8F7D6E84497448DABF7F525</key>
+		<key>ED80B839733649388F8ABCFC</key>
 		<dict>
 			<key>buildConfigurations</key>
 			<array>
-				<string>AFCC2964AE444FCF89802657</string>
-				<string>6C4DAFD59DE148ABB22049F7</string>
+				<string>9D9218A6EEDD4A2AA67E7841</string>
+				<string>5EF884CDDD954D6AAD3D407F</string>
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
@@ -1429,15 +1324,120 @@
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
-		<key>F9444723318A400C9264A008</key>
+		<key>EDD8F3FCD0564403B34AAE4D</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DBDatastoreManager.h</string>
+			<key>path</key>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBDatastoreManager.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F2F7F9C13B4C4F8BA9DB3B7C</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DBAccountInfo.h</string>
+			<key>path</key>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBAccountInfo.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F3D2F320FE4444A0909B02A6</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text</string>
+			<key>path</key>
+			<string>Pods-items-acknowledgements.markdown</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>F5AEE4660BEE4570A7E2515C</key>
+		<dict>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>wrapper.framework</string>
+			<key>name</key>
+			<string>CFNetwork.framework</string>
+			<key>path</key>
+			<string>Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.0.sdk/System/Library/Frameworks/CFNetwork.framework</string>
+			<key>sourceTree</key>
+			<string>DEVELOPER_DIR</string>
+		</dict>
+		<key>F6CEBD1D6FAA45D6BE8995BE</key>
 		<dict>
 			<key>fileRef</key>
-			<string>AB981CFFEDB042FB88F827A4</string>
+			<string>8B7B613D240541028F615386</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
 		</dict>
+		<key>F767792A317E414683E3494F</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>sourcecode.c.h</string>
+			<key>name</key>
+			<string>DBList.h</string>
+			<key>path</key>
+			<string>dropbox-ios-sync-sdk-2.0.2/Dropbox.framework/Headers/DBList.h</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FB27037F70A6405CBCB2A2BB</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.plist.xml</string>
+			<key>path</key>
+			<string>Pods-items-acknowledgements.plist</string>
+			<key>sourceTree</key>
+			<string>&lt;group&gt;</string>
+		</dict>
+		<key>FF5718C3564D46C2AF6394FE</key>
+		<dict>
+			<key>fileRef</key>
+			<string>F5AEE4660BEE4570A7E2515C</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+		</dict>
+		<key>FFFA55BCDC4546F9AB296403</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array>
+				<string>3077AB713FEE40A8B588D317</string>
+				<string>1EBC9EAE269542C99EB95932</string>
+			</array>
+			<key>isa</key>
+			<string>PBXFrameworksBuildPhase</string>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+		</dict>
 	</dict>
 	<key>rootObject</key>
-	<string>F184087BA28A4F1CBDD82E33</string>
+	<string>64B6CACB39C7401AAA68DA3C</string>
 </dict>
 </plist>
