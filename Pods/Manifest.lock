@@ -1,10 +1,16 @@
 PODS:
+  - BlocksKit (1.8.3):
+    - libffi
   - Dropbox-Sync-API-SDK (2.0.2)
+  - libffi (3.0.13)
 
 DEPENDENCIES:
+  - BlocksKit
   - Dropbox-Sync-API-SDK
 
 SPEC CHECKSUMS:
+  BlocksKit: 27257f9cbbec0ea98c80ba83cc2ea7111ae62eb2
   Dropbox-Sync-API-SDK: bfb47e41a47c18b5156efd084973de0a09499b11
+  libffi: 64ef39353e747bb2b25e1026afd96a157bf9231c
 
 COCOAPODS: 0.27.1
