@@ -1,21 +1,27 @@
-//
-//  AppDelegate.m
-//  items
-//
-//  Created by hiroshi on 2013/11/02.
-//  Copyright (c) 2013年 yakitara.com. All rights reserved.
-//
-
 #import "AppDelegate.h"
+#import "ItemsViewController.h"
+#import <Dropbox/Dropbox.h>
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    // Dropbox
+    NSString *appKey = [[NSUserDefaults standardUserDefaults] stringForKey:@"DropboxAppKey"];
+    NSString *appSecret = [[NSUserDefaults standardUserDefaults] stringForKey:@"DropboxAppSecret"];
+    DBAccountManager* accountMgr = [[DBAccountManager alloc] initWithAppKey:appKey secret:appSecret];
+    [DBAccountManager setSharedManager:accountMgr];
+    // Window and rootViewController
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    ItemsViewController *viewController = [[ItemsViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+    self.window.rootViewController = navController;
+    // Dropbox account
+    if (![DBAccountManager sharedManager].linkedAccount) {
+        [[DBAccountManager sharedManager] linkFromController:self.window.rootViewController];
+    }
     return YES;
 }
 
@@ -46,4 +52,13 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url sourceApplication:(NSString *)source annotation:(id)annotation
+{
+    DBAccount *account = [[DBAccountManager sharedManager] handleOpenURL:url];
+    if (account) {
+        NSLog(@"App linked successfully!");
+        return YES;
+    }
+    return NO;
+}
 @end
