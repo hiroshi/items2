@@ -39,18 +39,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    // Items
-    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
-    if (account) {
-        DBDatastore *store = account.defaultStore;
-        DBError *error = nil;
-        DBTable *table = [store getTable:@"items"];
-        self.items = [table query:nil error:&error];
-        if (error) {
-            NSLog(@"Error: %@", error);
-        }
-        [self.tableView reloadData];
-    }
+    [self reloadItems];
+    [self.tableView reloadData];
     // Add item button
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
         TextViewController *viewController = [TextViewController new];
@@ -67,6 +57,22 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark -
+
+- (void)reloadItems
+{
+    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
+    if (account) {
+        DBDatastore *store = account.defaultStore;
+        DBError *error = nil;
+        DBTable *table = [store getTable:@"items"];
+        self.items = [table query:nil error:&error];
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }
+    }
 }
 
 #pragma mark - Table view data source
@@ -90,6 +96,25 @@
 }
 
 #pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    DBRecord *record = self.items[indexPath.row];
+    DBError *error = nil;
+    switch (editingStyle) {
+        case UITableViewCellEditingStyleDelete:
+            [record deleteRecord];
+            [[DBAccountManager sharedManager].linkedAccount.defaultStore sync:&error];
+            if (error) {
+                NSLog(@"Error: %@", error);
+            }
+            [self reloadItems];
+            [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+            break;
+        default:
+            break;
+    }
+}
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
