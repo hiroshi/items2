@@ -8,7 +8,10 @@
 {
     // Dropbox
     NSString *appKey = [[NSUserDefaults standardUserDefaults] stringForKey:@"DropboxAppKey"];
+    [[NSUserDefaults standardUserDefaults] setObject:appKey forKey:@"DropboxAppKey"];
     NSString *appSecret = [[NSUserDefaults standardUserDefaults] stringForKey:@"DropboxAppSecret"];
+    [[NSUserDefaults standardUserDefaults] setObject:appSecret forKey:@"DropboxAppSecret"];
+    [[NSUserDefaults standardUserDefaults] synchronize];
     DBAccountManager* accountMgr = [[DBAccountManager alloc] initWithAppKey:appKey secret:appSecret];
     [DBAccountManager setSharedManager:accountMgr];
     // Window and rootViewController
