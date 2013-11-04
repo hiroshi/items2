@@ -41,7 +41,8 @@
         DBDatastore *store = account.defaultStore;
         DBError *error = nil;
         DBTable *table = [store getTable:@"items"];
-        /*DBRecord *record =*/ [table insert:@{@"title": self.textView.text}];
+        NSNumber *pos = [NSNumber numberWithDouble:[NSDate timeIntervalSinceReferenceDate]];
+        /*DBRecord *record =*/ [table insert:@{@"title": self.textView.text, @"pos": pos}];
         [store sync:&error];
         [self dismissViewControllerAnimated:YES completion:^{
             NSLog(@"textViewController saved");

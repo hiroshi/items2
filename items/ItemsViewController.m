@@ -68,7 +68,9 @@
         DBDatastore *store = account.defaultStore;
         DBError *error = nil;
         DBTable *table = [store getTable:@"items"];
-        self.items = [table query:nil error:&error];
+        self.items = [[table query:nil error:&error] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            return [((DBRecord *)obj2)[@"pos"] doubleValue] - [((DBRecord *)obj1)[@"pos"] doubleValue];
+        }];
         if (error) {
             NSLog(@"Error: %@", error);
         }
