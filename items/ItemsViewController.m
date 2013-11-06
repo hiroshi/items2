@@ -120,6 +120,9 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    DBRecord *record = self.items[indexPath.row];
+    TextViewController *viewController = [[TextViewController alloc] initWithDBRecord:record];
+    [self.navigationController pushViewController:viewController animated:YES];
 //    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:indexPath];
 //    if ([cell.reuseIdentifier isEqual:@"LinkAccount"]) {
 //        [[DBAccountManager sharedManager] linkFromController:self];

@@ -6,16 +6,26 @@
 @interface TextViewController ()
 
 @property (nonatomic, strong) UITextView *textView;
+@property (nonatomic, strong) DBRecord *record;
 
 @end
 
 @implementation TextViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+//{
+//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+//    if (self) {
+//        // Custom initialization
+//    }
+//    return self;
+//}
+
+- (id)initWithDBRecord:(DBRecord *)record
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    self = [super init];
     if (self) {
-        // Custom initialization
+        self.record = record;
     }
     return self;
 }
@@ -26,27 +36,34 @@
     // text view
     UITextView *textView = [[UITextView alloc] initWithFrame:self.view.frame];
     self.textView = textView;
-    textView.text = @"hello";
-    //textView.backgroundColor = [UIColor redColor];
     [self.view addSubview:textView];
-    // cancel button
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel handler:^(id sender) {
-        [self dismissViewControllerAnimated:YES completion:^{
-            NSLog(@"textViewController canceled");
+    if (self.record) {
+        textView.text = self.record[@"title"];
+    } else {
+        // cancel button
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel handler:^(id sender) {
+            [self dismissViewControllerAnimated:YES completion:^{
+                NSLog(@"textViewController canceled");
+            }];
         }];
-    }];
+    }
     // save button
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave handler:^(id sender) {
         DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
         DBDatastore *store = account.defaultStore;
+        if (self.record) {
+            self.record[@"title"] = self.textView.text;
+            [self.navigationController popToRootViewControllerAnimated:YES];
+        } else {
+            DBTable *table = [store getTable:@"items"];
+            NSNumber *pos = [NSNumber numberWithDouble:[NSDate timeIntervalSinceReferenceDate]];
+            /*DBRecord *record =*/ [table insert:@{@"title": self.textView.text, @"pos": pos}];
+            [self dismissViewControllerAnimated:YES completion:^{
+                NSLog(@"textViewController saved");
+            }];
+        }
         DBError *error = nil;
-        DBTable *table = [store getTable:@"items"];
-        NSNumber *pos = [NSNumber numberWithDouble:[NSDate timeIntervalSinceReferenceDate]];
-        /*DBRecord *record =*/ [table insert:@{@"title": self.textView.text, @"pos": pos}];
         [store sync:&error];
-        [self dismissViewControllerAnimated:YES completion:^{
-            NSLog(@"textViewController saved");
-        }];
     }];
 }
 
