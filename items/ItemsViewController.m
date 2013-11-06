@@ -31,7 +31,7 @@
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
 //        
 //    }];
@@ -95,6 +95,32 @@
     DBRecord *record = self.items[indexPath.row];
     cell.textLabel.text = record[@"title"];
     return cell;
+}
+
+- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
+{
+    NSLog(@"move: %d -> %d", sourceIndexPath.row, destinationIndexPath.row);
+    DBRecord *sourceRecord = self.items[sourceIndexPath.row];
+    NSInteger destIndex = destinationIndexPath.row;
+    double pos = 0;
+    if (destIndex == 0) {
+        pos = [NSDate timeIntervalSinceReferenceDate];
+    } else if (destIndex == self.items.count - 1) {
+        pos = 0;
+    } else {
+        DBRecord *before = self.items[destIndex - 1];
+        DBRecord *after = self.items[destIndex];
+        pos = ([before[@"pos"] doubleValue] + [after[@"pos"] doubleValue]) / 2.0;
+    }
+    NSLog(@"  pos: %f", pos);
+    sourceRecord[@"pos"] = [NSNumber numberWithDouble:pos];
+    DBDatastore *store = sourceRecord.table.datastore;
+    DBError *error = nil;
+    [store sync:&error];
+    if (error) {
+        NSLog(@"DBError: %@", error);
+    }
+    [self reloadItems];
 }
 
 #pragma mark - UITableViewDelegate
