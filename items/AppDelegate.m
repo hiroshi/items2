@@ -1,6 +1,7 @@
 #import "AppDelegate.h"
 #import "ItemsViewController.h"
 #import <Dropbox/Dropbox.h>
+#import "DBAccount+defaultStore.h"
 
 @implementation AppDelegate
 
@@ -14,6 +15,14 @@
     [[NSUserDefaults standardUserDefaults] synchronize];
     DBAccountManager* accountMgr = [[DBAccountManager alloc] initWithAppKey:appKey secret:appSecret];
     [DBAccountManager setSharedManager:accountMgr];
+    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
+    if (account) {
+        DBError *error = nil;
+        [account.defaultStore sync:&error];
+        if (error) {
+            NSLog(@"DBError: %@", error);
+        }
+    }
     // Window and rootViewController
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -22,7 +31,7 @@
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
     self.window.rootViewController = navController;
     // Dropbox account
-    if (![DBAccountManager sharedManager].linkedAccount) {
+    if (!account) {
         [[DBAccountManager sharedManager] linkFromController:self.window.rootViewController];
     }
     return YES;
