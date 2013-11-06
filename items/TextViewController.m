@@ -64,6 +64,9 @@
         }
         DBError *error = nil;
         [store sync:&error];
+        if (error) {
+            NSLog(@"DBError: %@", error);
+        }
     }];
 }
 
