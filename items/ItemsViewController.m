@@ -35,6 +35,16 @@
 //    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
 //        
 //    }];
+    DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
+    [account.defaultStore addObserver:self block:^{
+        DBError *error = nil;
+        [account.defaultStore sync:&error];
+        if (error) {
+            NSLog(@"Error: %@", error);
+        }
+        [self reloadItems];
+        [self.tableView reloadData];
+    }];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -99,7 +109,7 @@
 
 - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)sourceIndexPath toIndexPath:(NSIndexPath *)destinationIndexPath
 {
-    NSLog(@"move: %d -> %d", sourceIndexPath.row, destinationIndexPath.row);
+    NSLog(@"move: %ld -> %ld", (long)sourceIndexPath.row, (long)destinationIndexPath.row);
     DBRecord *sourceRecord = self.items[sourceIndexPath.row];
     NSInteger destIndex = destinationIndexPath.row;
     double pos = 0;
