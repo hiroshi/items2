@@ -3,10 +3,45 @@
 #import "DBAccount+defaultStore.h"
 #import <BlocksKit.h>
 #import "TextViewController.h"
+#import "LabelsViewController.h"
 
-@interface ItemsViewController ()
+static int32_t hashCode(NSString *str) {
+    int32_t hash = 0;
+    int len = str.length;
+    if (len == 0) return hash;
+    for (int i = 0; i < len; i++) {
+        unichar c = [str characterAtIndex:i];
+        hash = ((hash << 5) - hash) + c;
+    }
+    return hash;
+}
+
+NSString *base36enc(long unsigned int value)
+{
+    char base36[36] = "0123456789abcdefghijklmnopqrstuvwxyz";
+    /* log(2**64) / log(36) = 12.38 => max 13 char + '\0' */
+    char buffer[14];
+    unsigned int offset = sizeof(buffer);
+    
+    buffer[--offset] = '\0';
+    do {
+        buffer[--offset] = base36[value % 36];
+    } while (value /= 36);
+    return [NSString stringWithUTF8String:&buffer[offset]];
+}
+
+
+NSString *labelKey(NSString *labelName) {
+    //u_int32_t hash = hashCode([labelName UTF8String]);
+    u_int32_t hash = hashCode(labelName);
+    return [NSString stringWithFormat:@"label_%@", base36enc(hash)];
+}
+
+
+@interface ItemsViewController () <LabelsViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray *items;
+@property (nonatomic, strong) NSString *currentLabelName;
 
 @end
 
@@ -30,11 +65,20 @@
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+    // Edit button
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
-//    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
-//        
-//    }];
+    // Label select
+    UIButton *labelSelectButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+    [labelSelectButton setTitle:@"All Items" forState:UIControlStateNormal];
+    [labelSelectButton addEventHandler:^(id sender) {
+        LabelsViewController *labelsViewController = [[LabelsViewController alloc] initWithCurrentLabelName:self.currentLabelName delegate:self];
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:labelsViewController];
+        [self presentViewController:nav animated:YES completion:^{
+            NSLog(@"completion");
+        }];
+    } forControlEvents:UIControlEventTouchDown];
+    self.navigationItem.titleView = labelSelectButton;
+    // Dropbox things
     DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
     [account.defaultStore addObserver:self block:^{
         DBError *error = nil;
@@ -51,7 +95,7 @@
 {
     [self reloadItems];
     [self.tableView reloadData];
-    // Add item button
+    // Set toolbar - [AddItem]
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
         TextViewController *viewController = [TextViewController new];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
@@ -78,7 +122,11 @@
         DBDatastore *store = account.defaultStore;
         DBError *error = nil;
         DBTable *table = [store getTable:@"items"];
-        self.items = [[table query:nil error:&error] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        NSDictionary *query = nil;
+        if (self.currentLabelName) {
+            query = @{labelKey(self.currentLabelName): self.currentLabelName};
+        }
+        self.items = [[table query:query error:&error] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             return [((DBRecord *)obj2)[@"pos"] doubleValue] - [((DBRecord *)obj1)[@"pos"] doubleValue];
         }];
         if (error) {
@@ -163,6 +211,25 @@
 //    if ([cell.reuseIdentifier isEqual:@"LinkAccount"]) {
 //        [[DBAccountManager sharedManager] linkFromController:self];
 //    }
+}
+
+#pragma mark - LabelsViewControllerDelegate
+
+- (void)labelsViewController:(LabelsViewController *)labelsViewController didSelectLabelName:(NSString *)labelName
+{
+    // filter items
+    self.currentLabelName = labelName;
+    
+    
+    // change button title
+    UIButton *button = (UIButton *)self.navigationItem.titleView;
+    if (!labelName) {
+        labelName = @"All Items";
+    }
+    [button setTitle:labelName forState:UIControlStateNormal];
+    [button sizeToFit];
+    [self reloadItems];
+    [self.tableView reloadData];
 }
 
 @end
