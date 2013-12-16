@@ -89,6 +89,7 @@ NSString *labelKey(NSString *labelName) {
         [self reloadItems];
         [self.tableView reloadData];
     }];
+    [account.defaultStore sync:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated
