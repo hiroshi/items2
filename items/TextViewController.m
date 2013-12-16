@@ -56,7 +56,7 @@
             [self.navigationController popToRootViewControllerAnimated:YES];
         } else {
             DBTable *table = [store getTable:@"items"];
-            NSNumber *pos = [NSNumber numberWithDouble:[NSDate timeIntervalSinceReferenceDate]];
+            NSNumber *pos = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
             /*DBRecord *record =*/ [table insert:@{@"title": self.textView.text, @"pos": pos}];
             [self dismissViewControllerAnimated:YES completion:^{
                 NSLog(@"textViewController saved");
