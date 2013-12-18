@@ -4,39 +4,7 @@
 #import <BlocksKit.h>
 #import "TextViewController.h"
 #import "LabelsViewController.h"
-
-static int32_t hashCode(NSString *str) {
-    int32_t hash = 0;
-    int len = str.length;
-    if (len == 0) return hash;
-    for (int i = 0; i < len; i++) {
-        unichar c = [str characterAtIndex:i];
-        hash = ((hash << 5) - hash) + c;
-    }
-    return hash;
-}
-
-NSString *base36enc(long unsigned int value)
-{
-    char base36[36] = "0123456789abcdefghijklmnopqrstuvwxyz";
-    /* log(2**64) / log(36) = 12.38 => max 13 char + '\0' */
-    char buffer[14];
-    unsigned int offset = sizeof(buffer);
-    
-    buffer[--offset] = '\0';
-    do {
-        buffer[--offset] = base36[value % 36];
-    } while (value /= 36);
-    return [NSString stringWithUTF8String:&buffer[offset]];
-}
-
-
-NSString *labelKey(NSString *labelName) {
-    //u_int32_t hash = hashCode([labelName UTF8String]);
-    u_int32_t hash = hashCode(labelName);
-    return [NSString stringWithFormat:@"label_%@", base36enc(hash)];
-}
-
+#import "Label.h"
 
 @interface ItemsViewController () <LabelsViewControllerDelegate>
 
@@ -98,7 +66,7 @@ NSString *labelKey(NSString *labelName) {
     [self.tableView reloadData];
     // Set toolbar - [AddItem]
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
-        TextViewController *viewController = [TextViewController new];
+        TextViewController *viewController = [[TextViewController alloc] initWithLabelNames:@[self.currentLabelName]];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         [self presentViewController:navController animated:YES completion:^{
             NSLog(@"present textViewController for new item done.");
@@ -125,7 +93,7 @@ NSString *labelKey(NSString *labelName) {
         DBTable *table = [store getTable:@"items"];
         NSDictionary *query = nil;
         if (self.currentLabelName) {
-            query = @{labelKey(self.currentLabelName): self.currentLabelName};
+            query = @{[Label labelKeyForName:self.currentLabelName]: self.currentLabelName};
         }
         self.items = [[table query:query error:&error] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
             return [((DBRecord *)obj2)[@"pos"] doubleValue] - [((DBRecord *)obj1)[@"pos"] doubleValue];

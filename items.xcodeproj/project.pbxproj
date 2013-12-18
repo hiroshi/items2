@@ -22,6 +22,7 @@
 		68795B5E1825E4C10026E01F /* ItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68795B5D1825E4C10026E01F /* ItemsViewController.m */; };
 		68795B6118268ECF0026E01F /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68795B6018268ECF0026E01F /* TextViewController.m */; };
 		68795B6418273D390026E01F /* DBAccount+defaultStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 68795B6318273D390026E01F /* DBAccount+defaultStore.m */; };
+		6884B95F1861D866002C8540 /* Label.m in Sources */ = {isa = PBXBuildFile; fileRef = 6884B95E1861D866002C8540 /* Label.m */; };
 		68FFAA261859D1A900BF5C23 /* LabelsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68FFAA251859D1A900BF5C23 /* LabelsViewController.m */; };
 		ABE4BBA91FE94F4E9546CC9C /* libPods-items.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E74B6A662D5C46D68FEE7A8F /* libPods-items.a */; };
 /* End PBXBuildFile section */
@@ -59,6 +60,8 @@
 		68795B6018268ECF0026E01F /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		68795B6218273D390026E01F /* DBAccount+defaultStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DBAccount+defaultStore.h"; sourceTree = "<group>"; };
 		68795B6318273D390026E01F /* DBAccount+defaultStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DBAccount+defaultStore.m"; sourceTree = "<group>"; };
+		6884B95D1861D866002C8540 /* Label.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Label.h; sourceTree = "<group>"; };
+		6884B95E1861D866002C8540 /* Label.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Label.m; sourceTree = "<group>"; };
 		68FFAA241859D1A900BF5C23 /* LabelsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LabelsViewController.h; sourceTree = "<group>"; };
 		68FFAA251859D1A900BF5C23 /* LabelsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LabelsViewController.m; sourceTree = "<group>"; };
 		BD53DAF6E5EB4B52A5321D7C /* Pods-items.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-items.xcconfig"; path = "Pods/Pods-items.xcconfig"; sourceTree = "<group>"; };
@@ -127,6 +130,8 @@
 			children = (
 				68795B3918253AEC0026E01F /* AppDelegate.h */,
 				68795B3A18253AEC0026E01F /* AppDelegate.m */,
+				6884B95D1861D866002C8540 /* Label.h */,
+				6884B95E1861D866002C8540 /* Label.m */,
 				68795B5C1825E4C10026E01F /* ItemsViewController.h */,
 				68795B5D1825E4C10026E01F /* ItemsViewController.m */,
 				68795B5F18268ECF0026E01F /* TextViewController.h */,
@@ -303,6 +308,7 @@
 				68795B5E1825E4C10026E01F /* ItemsViewController.m in Sources */,
 				68FFAA261859D1A900BF5C23 /* LabelsViewController.m in Sources */,
 				68795B3B18253AEC0026E01F /* AppDelegate.m in Sources */,
+				6884B95F1861D866002C8540 /* Label.m in Sources */,
 				68795B3718253AEC0026E01F /* main.m in Sources */,
 				68795B6418273D390026E01F /* DBAccount+defaultStore.m in Sources */,
 				68795B6118268ECF0026E01F /* TextViewController.m in Sources */,

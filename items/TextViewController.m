@@ -2,24 +2,17 @@
 #import <BlocksKit.h>
 #import <Dropbox/Dropbox.h>
 #import "DBAccount+defaultStore.h"
+#import "Label.h"
 
 @interface TextViewController ()
 
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) DBRecord *record;
+@property (nonatomic, strong) NSArray *labelNames;
 
 @end
 
 @implementation TextViewController
-
-//- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-//{
-//    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-//    if (self) {
-//        // Custom initialization
-//    }
-//    return self;
-//}
 
 - (id)initWithDBRecord:(DBRecord *)record
 {
@@ -29,6 +22,16 @@
     }
     return self;
 }
+
+- (id)initWithLabelNames:(NSArray *)labelNames
+{
+    self = [super init];
+    if (self) {
+        self.labelNames = labelNames;
+    }
+    return self;
+}
+
 
 - (void)viewDidLoad
 {
@@ -57,7 +60,11 @@
         } else {
             DBTable *table = [store getTable:@"items"];
             NSNumber *pos = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
-            /*DBRecord *record =*/ [table insert:@{@"title": self.textView.text, @"pos": pos}];
+            NSMutableDictionary *fields = [NSMutableDictionary dictionaryWithDictionary:@{@"title": self.textView.text, @"pos": pos}];
+            for (NSString *labelName in self.labelNames) {
+                fields[[Label labelKeyForName:labelName]] = labelName;
+            }
+            /*DBRecord *record =*/ [table insert:fields];
             [self dismissViewControllerAnimated:YES completion:^{
                 NSLog(@"textViewController saved");
             }];
