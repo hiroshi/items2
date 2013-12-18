@@ -163,10 +163,14 @@ NSString *labelKey(NSString *labelName) {
     NSInteger destIndex = destinationIndexPath.row;
     double pos = 0;
     if (destIndex == 0) {
-        pos = [NSDate timeIntervalSinceReferenceDate];
+        pos = [[NSDate date] timeIntervalSince1970];
     } else if (destIndex == self.items.count - 1) {
-        pos = 0;
+        DBRecord *last = self.items[destIndex];
+        pos = [last[@"pos"] doubleValue] / 2.0;
     } else {
+        if (destIndex > sourceIndexPath.row) {
+            destIndex += 1;
+        }
         DBRecord *before = self.items[destIndex - 1];
         DBRecord *after = self.items[destIndex];
         pos = ([before[@"pos"] doubleValue] + [after[@"pos"] doubleValue]) / 2.0;
