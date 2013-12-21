@@ -122,6 +122,19 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Item" forIndexPath:indexPath];
     DBRecord *record = self.items[indexPath.row];
     cell.textLabel.text = record[@"title"];
+    [cell addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+        if (state == UIGestureRecognizerStateBegan) {
+            UIActionSheet *sheet = [UIActionSheet actionSheetWithTitle:nil];
+            [sheet addButtonWithTitle:@"Copy text" handler:^{
+                [UIPasteboard generalPasteboard].string = record[@"title"];
+            }];
+//            [sheet addButtonWithTitle:@"Open URL" handler:^{
+//                //[UIPasteboard generalPasteboard].string = record[@"title"];
+//            }];
+            [sheet setCancelButtonWithTitle:nil handler:nil];
+            [sheet showInView:sender.view];
+        }
+    }]];
     return cell;
 }
 
