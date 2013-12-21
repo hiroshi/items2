@@ -66,7 +66,8 @@
     [self.tableView reloadData];
     // Set toolbar - [AddItem]
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
-        TextViewController *viewController = [[TextViewController alloc] initWithLabelNames:@[self.currentLabelName]];
+        NSArray *labelNames = self.currentLabelName ? @[self.currentLabelName] : nil;
+        TextViewController *viewController = [[TextViewController alloc] initWithLabelNames:labelNames];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         [self presentViewController:navController animated:YES completion:^{
             NSLog(@"present textViewController for new item done.");
