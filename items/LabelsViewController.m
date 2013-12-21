@@ -5,6 +5,7 @@
 
 #import "LabelsViewController.h"
 #import "DBAccount+defaultStore.h"
+#import <BlocksKit.h>
 
 
 @interface LabelsViewController ()
@@ -31,7 +32,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.navigationItem.title = @"Labels";
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel handler:^(id sender) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
