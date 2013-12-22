@@ -121,12 +121,12 @@
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Item" forIndexPath:indexPath];
     DBRecord *record = self.items[indexPath.row];
-    cell.textLabel.text = record[@"title"];
+    cell.textLabel.text = record[@"text"];
     [cell addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
         if (state == UIGestureRecognizerStateBegan) {
             UIActionSheet *sheet = [UIActionSheet actionSheetWithTitle:nil];
             [sheet addButtonWithTitle:@"Copy text" handler:^{
-                [UIPasteboard generalPasteboard].string = record[@"title"];
+                [UIPasteboard generalPasteboard].string = record[@"text"];
             }];
 //            [sheet addButtonWithTitle:@"Open URL" handler:^{
 //                //[UIPasteboard generalPasteboard].string = record[@"title"];

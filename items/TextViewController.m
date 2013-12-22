@@ -41,7 +41,7 @@
     self.textView = textView;
     [self.view addSubview:textView];
     if (self.record) {
-        textView.text = self.record[@"title"];
+        textView.text = self.record[@"text"];
     } else {
         // cancel button
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel handler:^(id sender) {
@@ -55,12 +55,12 @@
         DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
         DBDatastore *store = account.defaultStore;
         if (self.record) {
-            self.record[@"title"] = self.textView.text;
+            self.record[@"text"] = self.textView.text;
             [self.navigationController popToRootViewControllerAnimated:YES];
         } else {
             DBTable *table = [store getTable:@"items"];
             NSNumber *pos = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
-            NSMutableDictionary *fields = [NSMutableDictionary dictionaryWithDictionary:@{@"title": self.textView.text, @"pos": pos}];
+            NSMutableDictionary *fields = [NSMutableDictionary dictionaryWithDictionary:@{@"text": self.textView.text, @"pos": pos}];
             for (NSString *labelName in self.labelNames) {
                 fields[[Label labelKeyForName:labelName]] = labelName;
             }
