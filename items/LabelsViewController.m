@@ -6,24 +6,24 @@
 #import "LabelsViewController.h"
 #import "DBAccount+defaultStore.h"
 #import <BlocksKit.h>
-
+#import "Filter.h"
 
 @interface LabelsViewController ()
 
 @property (nonatomic, strong) NSArray *labels;
-@property (nonatomic, strong) NSString *oldLabelName;
+@property (nonatomic, strong) Filter *lastFilter;
 @property (nonatomic, weak) id<LabelsViewControllerDelegate> delegate;
 
 @end
 
 @implementation LabelsViewController
 
-- (id)initWithCurrentLabelName:(NSString *)labelName delegate:(id<LabelsViewControllerDelegate>)delegate
+- (id)initWithSelectedFilter:(Filter *)filter delegate:(id<LabelsViewControllerDelegate>)delegate
 {
     self = [super initWithStyle:UITableViewStylePlain];
     if (self) {
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell"];
-        self.oldLabelName = labelName;
+        self.lastFilter = filter;
         self.delegate = delegate;
     }
     return self;
@@ -54,13 +54,18 @@
 - (NSArray *)labels
 {
     if (!_labels) {
+        NSMutableArray *labels = [NSMutableArray arrayWithObject:[Filter allItems]];
         DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
         if (account) {
             DBDatastore *store = account.defaultStore;
             DBError *error = nil;
             DBTable *table = [store getTable:@"labels"];
-            _labels = [table query:Nil error:&error];
+            [labels addObjectsFromArray:[[table query:nil error:&error] map:^id(id obj) {
+                return [Filter filterWithLabelName:obj[@"name"]];
+            }]];
         }
+        [labels addObject:[Filter archive]];
+        _labels = labels;
     }
     return _labels;
 }
@@ -74,23 +79,16 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.labels.count + 1;
+    return self.labels.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    BOOL check = NO;
-    NSString *name = @"All Items";
-    if (indexPath.row == 0) {
-        check = !self.oldLabelName;
-    } else {
-        DBRecord *record = self.labels[indexPath.row - 1];
-        name = record[@"name"];
-        check = [name isEqual:self.oldLabelName];
-    }
-    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", check ? @"\u2713" :  @"\u2001", name];
+    Filter *filter = self.labels[indexPath.row];
+    BOOL check = [filter isEqual:self.lastFilter];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@ %@", check ? @"\u2713" :  @"\u2001", filter.title];
     return cell;
 }
 
@@ -99,11 +97,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-    NSString *labelName = nil;
-    if (indexPath.row > 0) {
-        DBRecord *record = self.labels[indexPath.row - 1];
-        labelName = record[@"name"];
-    }
-    [self.delegate labelsViewController:self didSelectLabelName:labelName];
+    Filter *filter = self.labels[indexPath.row];
+    [self.delegate labelsViewController:self didSelectFilter:filter];
 }
 @end

@@ -5,16 +5,17 @@
 
 #import <UIKit/UIKit.h>
 @protocol LabelsViewControllerDelegate;
+@class Filter;
 
 @interface LabelsViewController : UITableViewController
 
-- (id)initWithCurrentLabelName:(NSString *)labelName delegate:(id<LabelsViewControllerDelegate>)delegate;
+- (id)initWithSelectedFilter:(Filter *)filter delegate:(id<LabelsViewControllerDelegate>)delegate;
 
 @end
 
 
 @protocol LabelsViewControllerDelegate
 
-- (void)labelsViewController:(LabelsViewController *)labelsViewController didSelectLabelName:(NSString *)labelName;
+- (void)labelsViewController:(LabelsViewController *)labelsViewController didSelectFilter:(Filter *)filter;
 
 @end

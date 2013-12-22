@@ -5,11 +5,14 @@
 #import "TextViewController.h"
 #import "LabelsViewController.h"
 #import "Label.h"
+#import "Filter.h"
 
 @interface ItemsViewController () <LabelsViewControllerDelegate>
 
 @property (nonatomic, strong) NSArray *items;
-@property (nonatomic, strong) NSString *currentLabelName;
+//@property (nonatomic, strong) NSString *currentLabelName;
+//@property (nonatomic, assign) BOOL isArchive;
+@property (nonatomic, strong) Filter *filter;
 
 @end
 
@@ -19,6 +22,7 @@
 {
     self = [super initWithStyle:style];
     if (self) {
+        self.filter = [Filter allItems];
         //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"LinkAccount"];
         [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Item"];
         //[self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"AddItem"];
@@ -37,9 +41,10 @@
     self.navigationItem.rightBarButtonItem = self.editButtonItem;
     // Label select
     UIButton *labelSelectButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [labelSelectButton setTitle:@"All Items" forState:UIControlStateNormal];
+    [labelSelectButton setTitle:self.filter.title forState:UIControlStateNormal];
     [labelSelectButton addEventHandler:^(id sender) {
-        LabelsViewController *labelsViewController = [[LabelsViewController alloc] initWithCurrentLabelName:self.currentLabelName delegate:self];
+        //LabelsViewController *labelsViewController = [[LabelsViewController alloc] initWithCurrentLabelName:self.currentLabelName isArchive:self.isArchive delegate:self];
+        LabelsViewController *labelsViewController = [[LabelsViewController alloc] initWithSelectedFilter:self.filter delegate:self];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:labelsViewController];
         [self presentViewController:nav animated:YES completion:^{
             NSLog(@"completion");
@@ -66,8 +71,9 @@
     [self.tableView reloadData];
     // Set toolbar - [AddItem]
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
-        NSArray *labelNames = self.currentLabelName ? @[self.currentLabelName] : nil;
-        TextViewController *viewController = [[TextViewController alloc] initWithLabelNames:labelNames];
+        //NSArray *labelNames = self.currentLabelName ? @[self.currentLabelName] : nil;
+        //NSArray *labelNames = self.filter.labelName ? @[self.filtercurrentLabelName] : nil;
+        TextViewController *viewController = [[TextViewController alloc] initWithLabelNames:self.filter.labelNames];
         UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         [self presentViewController:navController animated:YES completion:^{
             NSLog(@"present textViewController for new item done.");
@@ -91,14 +97,19 @@
     if (account) {
         DBDatastore *store = account.defaultStore;
         DBError *error = nil;
-        DBTable *table = [store getTable:@"items"];
-        NSDictionary *query = nil;
-        if (self.currentLabelName) {
-            query = @{[Label labelKeyForName:self.currentLabelName]: self.currentLabelName};
+        if (self.filter.isArchive) {
+            DBTable *table = [store getTable:@"archives"];
+            self.items = [table query:nil error:&error];
+        } else {
+            DBTable *table = [store getTable:@"items"];
+            NSMutableDictionary *query = [NSMutableDictionary dictionary];
+            for (NSString *labelName in self.filter.labelNames) {
+                [query setObject:labelName forKey:[Label labelKeyForName:labelName]];
+            }
+            self.items = [[table query:query error:&error] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+                return [((DBRecord *)obj2)[@"pos"] doubleValue] - [((DBRecord *)obj1)[@"pos"] doubleValue];
+            }];
         }
-        self.items = [[table query:query error:&error] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-            return [((DBRecord *)obj2)[@"pos"] doubleValue] - [((DBRecord *)obj1)[@"pos"] doubleValue];
-        }];
         if (error) {
             NSLog(@"Error: %@", error);
         }
@@ -170,14 +181,23 @@
 
 #pragma mark - UITableViewDelegate
 
+- (NSString *)tableView:(UITableView *)tableView titleForDeleteConfirmationButtonForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return @"Archive";
+}
+
 - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     DBRecord *record = self.items[indexPath.row];
     DBError *error = nil;
     switch (editingStyle) {
         case UITableViewCellEditingStyleDelete:
-            [record deleteRecord];
-            [[DBAccountManager sharedManager].linkedAccount.defaultStore sync:&error];
+            {
+                DBDatastore *store = [DBAccountManager sharedManager].linkedAccount.defaultStore;
+                [[store getTable:@"archives"] insert:record.fields];
+                [record deleteRecord];
+                [store sync:&error];
+            }
             if (error) {
                 NSLog(@"Error: %@", error);
             }
@@ -202,19 +222,14 @@
 
 #pragma mark - LabelsViewControllerDelegate
 
-- (void)labelsViewController:(LabelsViewController *)labelsViewController didSelectLabelName:(NSString *)labelName
+- (void)labelsViewController:(LabelsViewController *)labelsViewController didSelectFilter:(Filter *)filter
 {
-    // filter items
-    self.currentLabelName = labelName;
-    
-    
     // change button title
     UIButton *button = (UIButton *)self.navigationItem.titleView;
-    if (!labelName) {
-        labelName = @"All Items";
-    }
-    [button setTitle:labelName forState:UIControlStateNormal];
+    [button setTitle:filter.title forState:UIControlStateNormal];
     [button sizeToFit];
+    // refresh items with filter
+    self.filter = filter;
     [self reloadItems];
     [self.tableView reloadData];
 }

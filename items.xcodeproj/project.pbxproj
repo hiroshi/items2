@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		685586501867260D00AD3959 /* Filter.m in Sources */ = {isa = PBXBuildFile; fileRef = 6855864F1867260D00AD3959 /* Filter.m */; };
 		68795B2B18253AEC0026E01F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68795B2A18253AEC0026E01F /* Foundation.framework */; };
 		68795B2D18253AEC0026E01F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68795B2C18253AEC0026E01F /* CoreGraphics.framework */; };
 		68795B2F18253AEC0026E01F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68795B2E18253AEC0026E01F /* UIKit.framework */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6855864E1867260D00AD3959 /* Filter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Filter.h; sourceTree = "<group>"; };
+		6855864F1867260D00AD3959 /* Filter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Filter.m; sourceTree = "<group>"; };
 		68795B2718253AEC0026E01F /* items.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = items.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68795B2A18253AEC0026E01F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		68795B2C18253AEC0026E01F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -132,6 +135,8 @@
 				68795B3A18253AEC0026E01F /* AppDelegate.m */,
 				6884B95D1861D866002C8540 /* Label.h */,
 				6884B95E1861D866002C8540 /* Label.m */,
+				6855864E1867260D00AD3959 /* Filter.h */,
+				6855864F1867260D00AD3959 /* Filter.m */,
 				68795B5C1825E4C10026E01F /* ItemsViewController.h */,
 				68795B5D1825E4C10026E01F /* ItemsViewController.m */,
 				68795B5F18268ECF0026E01F /* TextViewController.h */,
@@ -306,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68795B5E1825E4C10026E01F /* ItemsViewController.m in Sources */,
+				685586501867260D00AD3959 /* Filter.m in Sources */,
 				68FFAA261859D1A900BF5C23 /* LabelsViewController.m in Sources */,
 				68795B3B18253AEC0026E01F /* AppDelegate.m in Sources */,
 				6884B95F1861D866002C8540 /* Label.m in Sources */,
