@@ -32,6 +32,16 @@
 				<string>db-qidrlfs46ow3v25</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Items</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>items</string>
+			</array>
+		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>0.1</string>

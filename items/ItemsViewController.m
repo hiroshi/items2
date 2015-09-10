@@ -73,14 +73,47 @@
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
         //NSArray *labelNames = self.currentLabelName ? @[self.currentLabelName] : nil;
         //NSArray *labelNames = self.filter.labelName ? @[self.filtercurrentLabelName] : nil;
-        TextViewController *viewController = [[TextViewController alloc] initWithLabelNames:self.filter.labelNames];
-        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+        TextViewController *viewController = [[TextViewController alloc] initWithLabelNames:self.filter.labelNames text:nil];        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
         [self presentViewController:navController animated:YES completion:^{
             NSLog(@"present textViewController for new item done.");
         }];
     }];
     [self setToolbarItems:@[addButton] animated:animated];
     [self.navigationController setToolbarHidden:NO animated:animated];
+    // NOTE: view for UIBarbuttonItem may not created before setToolbarHidden:NO
+    UIGestureRecognizer *gesture = [[UILongPressGestureRecognizer alloc] initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+        if (state == UIGestureRecognizerStateBegan) {
+            UIActionSheet *sheet = [UIActionSheet actionSheetWithTitle:@"New item"];
+            [sheet addButtonWithTitle:@"Create from clipboard" handler:^{
+                NSString *text = [UIPasteboard generalPasteboard].string;
+                DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
+                DBDatastore *store = account.defaultStore;
+                DBTable *table = [store getTable:@"items"];
+                NSNumber *pos = [NSNumber numberWithDouble:[[NSDate date] timeIntervalSince1970]];
+                NSMutableDictionary *fields = [NSMutableDictionary dictionaryWithDictionary:@{@"text": text, @"pos": pos}];
+                for (NSString *labelName in self.filter.labelNames) {
+                    fields[[Label labelKeyForName:labelName]] = labelName;
+                }
+                /*DBRecord *record =*/ [table insert:fields];
+                DBError *error = nil;
+                [store sync:&error];
+                if (error) {
+                    NSLog(@"DBError: %@", error);
+                }
+
+                
+//                TextViewController *viewController = [[TextViewController alloc] initWithLabelNames:self.filter.labelNames text:text];
+//                UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
+//                [self presentViewController:navController animated:YES completion:^{
+//                    NSLog(@"present textViewController from clipboard done.");
+//                }];
+            }];
+            [sheet setCancelButtonWithTitle:nil handler:nil];
+            [sheet showInView:sender.view];
+        }
+    }];
+    UIView *addButtonView = [addButton valueForKey:@"view"];
+    [addButtonView addGestureRecognizer:gesture];
 }
 
 - (void)didReceiveMemoryWarning

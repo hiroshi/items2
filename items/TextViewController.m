@@ -9,6 +9,7 @@
 @property (nonatomic, strong) UITextView *textView;
 @property (nonatomic, strong) DBRecord *record;
 @property (nonatomic, strong) NSArray *labelNames;
+@property (nonatomic, strong) NSString *initialText;
 
 @end
 
@@ -23,11 +24,12 @@
     return self;
 }
 
-- (id)initWithLabelNames:(NSArray *)labelNames
+- (id)initWithLabelNames:(NSArray *)labelNames text:(NSString *)text
 {
     self = [super init];
     if (self) {
         self.labelNames = labelNames;
+        self.initialText = text;
     }
     return self;
 }
@@ -43,6 +45,7 @@
     if (self.record) {
         textView.text = self.record[@"text"];
     } else {
+        textView.text = self.initialText;
         // cancel button
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel handler:^(id sender) {
             [self dismissViewControllerAnimated:YES completion:^{

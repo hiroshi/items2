@@ -4,6 +4,6 @@
 @interface TextViewController : UIViewController
 
 - (id)initWithDBRecord:(DBRecord *)record;
-- (id)initWithLabelNames:(NSArray *)labels;
+- (id)initWithLabelNames:(NSArray *)labels text:(NSString *)text;
 
 @end
