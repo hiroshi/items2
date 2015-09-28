@@ -5,7 +5,7 @@
 
 #import "LabelsViewController.h"
 #import "DBAccount+defaultStore.h"
-#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
 #import "Filter.h"
 
 @interface LabelsViewController ()
@@ -33,7 +33,7 @@
 {
     [super viewDidLoad];
     self.navigationItem.title = @"Labels";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel handler:^(id sender) {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithBarButtonSystemItem:UIBarButtonSystemItemCancel handler:^(id sender) {
         [self dismissViewControllerAnimated:YES completion:nil];
     }];
     // Uncomment the following line to preserve selection between presentations.
@@ -60,7 +60,7 @@
             DBDatastore *store = account.defaultStore;
             DBError *error = nil;
             DBTable *table = [store getTable:@"labels"];
-            [labels addObjectsFromArray:[[table query:nil error:&error] map:^id(id obj) {
+            [labels addObjectsFromArray:[[table query:nil error:&error] bk_map:^id(id obj) {
                 return [Filter filterWithLabelName:obj[@"name"]];
             }]];
         }

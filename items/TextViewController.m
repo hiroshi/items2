@@ -1,5 +1,5 @@
 #import "TextViewController.h"
-#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
 #import <Dropbox/Dropbox.h>
 #import "DBAccount+defaultStore.h"
 #import "Label.h"
@@ -47,14 +47,14 @@
     } else {
         textView.text = self.initialText;
         // cancel button
-        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel handler:^(id sender) {
+        self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] bk_initWithBarButtonSystemItem:UIBarButtonSystemItemCancel handler:^(id sender) {
             [self dismissViewControllerAnimated:YES completion:^{
                 NSLog(@"textViewController canceled");
             }];
         }];
     }
     // save button
-    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemSave handler:^(id sender) {
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] bk_initWithBarButtonSystemItem:UIBarButtonSystemItemSave handler:^(id sender) {
         DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
         DBDatastore *store = account.defaultStore;
         if (self.record) {

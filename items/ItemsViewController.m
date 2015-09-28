@@ -1,7 +1,7 @@
 #import "ItemsViewController.h"
 #import <Dropbox/Dropbox.h>
 #import "DBAccount+defaultStore.h"
-#import <BlocksKit.h>
+#import <BlocksKit+UIKit.h>
 #import "TextViewController.h"
 #import "LabelsViewController.h"
 #import "Label.h"
@@ -42,7 +42,7 @@
     // Label select
     UIButton *labelSelectButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [labelSelectButton setTitle:self.filter.title forState:UIControlStateNormal];
-    [labelSelectButton addEventHandler:^(id sender) {
+    [labelSelectButton bk_addEventHandler:^(id sender) {
         //LabelsViewController *labelsViewController = [[LabelsViewController alloc] initWithCurrentLabelName:self.currentLabelName isArchive:self.isArchive delegate:self];
         LabelsViewController *labelsViewController = [[LabelsViewController alloc] initWithSelectedFilter:self.filter delegate:self];
         UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:labelsViewController];
@@ -70,7 +70,7 @@
     [self reloadItems];
     [self.tableView reloadData];
     // Set toolbar - [AddItem]
-    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] bk_initWithBarButtonSystemItem:UIBarButtonSystemItemAdd handler:^(id sender) {
         //NSArray *labelNames = self.currentLabelName ? @[self.currentLabelName] : nil;
         //NSArray *labelNames = self.filter.labelName ? @[self.filtercurrentLabelName] : nil;
         TextViewController *viewController = [[TextViewController alloc] initWithLabelNames:self.filter.labelNames text:nil];        UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:viewController];
@@ -81,10 +81,10 @@
     [self setToolbarItems:@[addButton] animated:animated];
     [self.navigationController setToolbarHidden:NO animated:animated];
     // NOTE: view for UIBarbuttonItem may not created before setToolbarHidden:NO
-    UIGestureRecognizer *gesture = [[UILongPressGestureRecognizer alloc] initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+    UIGestureRecognizer *gesture = [[UILongPressGestureRecognizer alloc] bk_initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
         if (state == UIGestureRecognizerStateBegan) {
-            UIActionSheet *sheet = [UIActionSheet actionSheetWithTitle:@"New item"];
-            [sheet addButtonWithTitle:@"Create from clipboard" handler:^{
+            UIActionSheet *sheet = [UIActionSheet bk_actionSheetWithTitle:@"New item"];
+            [sheet bk_addButtonWithTitle:@"Create from clipboard" handler:^{
                 NSString *text = [UIPasteboard generalPasteboard].string;
                 DBAccount *account = [DBAccountManager sharedManager].linkedAccount;
                 DBDatastore *store = account.defaultStore;
@@ -108,7 +108,7 @@
 //                    NSLog(@"present textViewController from clipboard done.");
 //                }];
             }];
-            [sheet setCancelButtonWithTitle:nil handler:nil];
+            [sheet bk_setCancelButtonWithTitle:nil handler:nil];
             [sheet showInView:sender.view];
         }
     }];
@@ -166,16 +166,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Item" forIndexPath:indexPath];
     DBRecord *record = self.items[indexPath.row];
     cell.textLabel.text = record[@"text"];
-    [cell addGestureRecognizer:[[UILongPressGestureRecognizer alloc] initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+    [cell addGestureRecognizer:[[UILongPressGestureRecognizer alloc] bk_initWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
         if (state == UIGestureRecognizerStateBegan) {
-            UIActionSheet *sheet = [UIActionSheet actionSheetWithTitle:nil];
-            [sheet addButtonWithTitle:@"Copy text" handler:^{
+            UIActionSheet *sheet = [UIActionSheet bk_actionSheetWithTitle:nil];
+            [sheet bk_addButtonWithTitle:@"Copy text" handler:^{
                 [UIPasteboard generalPasteboard].string = record[@"text"];
             }];
 //            [sheet addButtonWithTitle:@"Open URL" handler:^{
 //                //[UIPasteboard generalPasteboard].string = record[@"title"];
 //            }];
-            [sheet setCancelButtonWithTitle:nil handler:nil];
+            [sheet bk_setCancelButtonWithTitle:nil handler:nil];
             [sheet showInView:sender.view];
         }
     }]];

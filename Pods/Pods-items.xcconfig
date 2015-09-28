@@ -1,5 +1,0 @@
-FRAMEWORK_SEARCH_PATHS = "$(PODS_ROOT)/Dropbox-Sync-API-SDK/dropbox-ios-sync-sdk-2.0.2"
-GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
-HEADER_SEARCH_PATHS = "${PODS_ROOT}/Headers" "${PODS_ROOT}/Headers/BlocksKit" "${PODS_ROOT}/Headers/Dropbox-Sync-API-SDK" "${PODS_ROOT}/Headers/libffi"
-OTHER_LDFLAGS = -ObjC -Wl,-no_compact_unwind -lc++ -framework CFNetwork -framework Dropbox -framework MessageUI -framework QuartzCore -framework Security -framework SystemConfiguration
-PODS_ROOT = ${SRCROOT}/Pods
